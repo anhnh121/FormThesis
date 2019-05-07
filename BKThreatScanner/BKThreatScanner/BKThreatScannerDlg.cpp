@@ -99,6 +99,9 @@ BOOL CBKThreatScannerDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
 	// TODO: Add extra initialization here
+	m_ScanTabOne.Create(IDD_TAB_ONE, &m_ScanTabCtrl);
+	m_ScanTabTwo.Create(IDD_TAB_TWO, &m_ScanTabCtrl);
+
 	m_ScanTabCtrl.InsertItem(0,_T("AnhNH1"));
 	m_ScanTabCtrl.InsertItem(1, _T("AnhNH2"));
 	m_ScanTabCtrl.InsertItem(2, _T("AnhNH3"));
@@ -109,6 +112,12 @@ BOOL CBKThreatScannerDlg::OnInitDialog()
 	m_ScanTabCtrl.InsertItem(7, _T("AnhNH8"));
 	m_ScanTabCtrl.InsertItem(8, _T("AnhNH9"));
 
+	CRect TabRect;
+	m_ScanTabCtrl.GetClientRect(&TabRect);
+	m_ScanTabCtrl.AdjustRect(FALSE, &TabRect);
+	m_ScanTabOne.MoveWindow(TabRect);
+	m_ScanTabTwo.MoveWindow(TabRect);
+	m_ScanTabOne.ShowWindow(SW_SHOW);
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
@@ -166,12 +175,16 @@ HCURSOR CBKThreatScannerDlg::OnQueryDragIcon()
 void CBKThreatScannerDlg::OnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	// TODO: Add your control notification handler code here
-	int iSel = m_ScanTabCtrl.GetCurSel();
-	switch (iSel)
+	//int iSel = m_ScanTabCtrl.GetCurSel();
+	switch (this->m_ScanTabCtrl.GetCurSel())
 	{
 	case 0:
+		this->m_ScanTabOne.ShowWindow(SW_SHOW);
+		this->m_ScanTabTwo.ShowWindow(SW_HIDE);
 		break;
 	case 1:
+		this->m_ScanTabTwo.ShowWindow(SW_SHOW);
+		this->m_ScanTabOne.ShowWindow(SW_HIDE);
 		break;
 	case 2:
 		break;
@@ -188,6 +201,8 @@ void CBKThreatScannerDlg::OnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult)
 	case 8:
 		break;
 	default:
+		this->m_ScanTabOne.ShowWindow(SW_SHOW);
+		this->m_ScanTabTwo.ShowWindow(SW_HIDE);
 		break;
 
 	}

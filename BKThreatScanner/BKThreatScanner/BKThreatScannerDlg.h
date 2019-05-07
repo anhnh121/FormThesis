@@ -4,6 +4,8 @@
 
 #pragma once
 #include "afxcmn.h"
+#include "TabOne.h"
+#include "TabTwo.h"
 
 
 // CBKThreatScannerDlg dialog
@@ -32,5 +34,7 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	CTabCtrl m_ScanTabCtrl;
+	CTabOne m_ScanTabOne;
+	CTabTwo m_ScanTabTwo;
 	afx_msg void OnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult);
 };
