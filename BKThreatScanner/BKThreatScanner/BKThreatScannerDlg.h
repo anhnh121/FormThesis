@@ -3,6 +3,7 @@
 //
 
 #pragma once
+#include "afxcmn.h"
 
 
 // CBKThreatScannerDlg dialog
@@ -29,4 +30,7 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	CTabCtrl m_ScanTabCtrl;
+	afx_msg void OnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult);
 };

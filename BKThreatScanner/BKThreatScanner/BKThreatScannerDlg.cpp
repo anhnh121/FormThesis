@@ -56,12 +56,14 @@ CBKThreatScannerDlg::CBKThreatScannerDlg(CWnd* pParent /*=NULL*/)
 void CBKThreatScannerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_TAB1, m_ScanTabCtrl);
 }
 
 BEGIN_MESSAGE_MAP(CBKThreatScannerDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_NOTIFY(TCN_SELCHANGE, IDC_TAB1, &CBKThreatScannerDlg::OnSelchangeTab1)
 END_MESSAGE_MAP()
 
 
@@ -97,6 +99,15 @@ BOOL CBKThreatScannerDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
 	// TODO: Add extra initialization here
+	m_ScanTabCtrl.InsertItem(0,_T("AnhNH1"));
+	m_ScanTabCtrl.InsertItem(1, _T("AnhNH2"));
+	m_ScanTabCtrl.InsertItem(2, _T("AnhNH3"));
+	m_ScanTabCtrl.InsertItem(3, _T("AnhNH4"));
+	m_ScanTabCtrl.InsertItem(4, _T("AnhNH5"));
+	m_ScanTabCtrl.InsertItem(5, _T("AnhNH6"));
+	m_ScanTabCtrl.InsertItem(6, _T("AnhNH7"));
+	m_ScanTabCtrl.InsertItem(7, _T("AnhNH8"));
+	m_ScanTabCtrl.InsertItem(8, _T("AnhNH9"));
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -150,3 +161,35 @@ HCURSOR CBKThreatScannerDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CBKThreatScannerDlg::OnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult)
+{
+	// TODO: Add your control notification handler code here
+	int iSel = m_ScanTabCtrl.GetCurSel();
+	switch (iSel)
+	{
+	case 0:
+		break;
+	case 1:
+		break;
+	case 2:
+		break;
+	case 3:
+		break;
+	case 4:
+		break;
+	case 5:
+		break;
+	case 6:
+		break;
+	case 7:
+		break;
+	case 8:
+		break;
+	default:
+		break;
+
+	}
+	*pResult = 0;
+}
