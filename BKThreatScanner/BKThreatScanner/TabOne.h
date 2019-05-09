@@ -1,5 +1,6 @@
 #pragma once
 #include "afxcmn.h"
+#include "afxwin.h"
 
 
 // CTabOne dialog
@@ -23,4 +24,7 @@ public:
 	CListCtrl m_listCtrl;
 	afx_msg void OnLvnItemchangedList1(NMHDR *pNMHDR, LRESULT *pResult);
 //	afx_msg void OnEditCopy();
+	afx_msg void OnHdnItemclickList1(NMHDR *pNMHDR, LRESULT *pResult);
+	afx_msg void OnDblclkList1(NMHDR *pNMHDR, LRESULT *pResult);
+	CEdit m_edit;
 };

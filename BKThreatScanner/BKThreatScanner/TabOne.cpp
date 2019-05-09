@@ -26,12 +26,15 @@ void CTabOne::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_LIST1, m_listCtrl);
+	DDX_Control(pDX, IDC_EDIT1, m_edit);
 }
 
 
 BEGIN_MESSAGE_MAP(CTabOne, CDialogEx)
 	ON_NOTIFY(LVN_ITEMCHANGED, IDC_LIST1, &CTabOne::OnLvnItemchangedList1)
 //	ON_COMMAND(ID_EDIT_COPY, &CTabOne::OnEditCopy)
+ON_NOTIFY(HDN_ITEMCLICK, 0, &CTabOne::OnHdnItemclickList1)
+ON_NOTIFY(NM_DBLCLK, IDC_LIST1, &CTabOne::OnDblclkList1)
 END_MESSAGE_MAP()
 
 BOOL CTabOne::OnInitDialog()
@@ -97,5 +100,41 @@ void CTabOne::OnLvnItemchangedList1(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMLISTVIEW pNMLV = reinterpret_cast<LPNMLISTVIEW>(pNMHDR);
 	// TODO: Add your control notification handler code here
+	*pResult = 0;
+}
+
+void CTabOne::OnHdnItemclickList1(NMHDR *pNMHDR, LRESULT *pResult)
+{
+	LPNMHEADER phdr = reinterpret_cast<LPNMHEADER>(pNMHDR);
+	// TODO: Add your control notification handler code here
+	//MessageBoxA(0,"OK", "OK", MB_OK);
+	*pResult = 0;
+}
+
+
+void CTabOne::OnDblclkList1(NMHDR *pNMHDR, LRESULT *pResult)
+{
+	LPNMITEMACTIVATE pNMItemActivate = reinterpret_cast<LPNMITEMACTIVATE>(pNMHDR);
+	// TODO: Add your control notification handler code here
+	int row = m_listCtrl.GetSelectionMark();
+	if (row < 0)
+		return;
+	CString s1 = m_listCtrl.GetItemText(row, 0);
+	CString s2 = m_listCtrl.GetItemText(row, 1);
+	CString s3 = m_listCtrl.GetItemText(row, 2);
+
+	CString dll_ret = L"PID = " + s1 + L"\nPath = " + s2 + L"\nSigned = " + s3 + "\n";
+	CT2A output(dll_ret);
+	const size_t len = strlen(output) + 1;
+	HGLOBAL hMem = GlobalAlloc(GMEM_MOVEABLE, len);
+	memcpy(GlobalLock(hMem), output, len);
+	GlobalUnlock(hMem);
+	OpenClipboard();
+	EmptyClipboard();
+	SetClipboardData(CF_TEXT, hMem);
+	CloseClipboard();
+	MessageBoxW(L"Copied to Clipboard",L"OK", 0);
+	//m_edit.SetWindowTextW(dll_ret.GetBuffer());
+	//MessageBoxW(s2.GetBuffer(),L"OK", 0);
 	*pResult = 0;
 }
