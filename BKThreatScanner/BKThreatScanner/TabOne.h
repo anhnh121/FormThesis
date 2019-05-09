@@ -22,4 +22,5 @@ protected:
 public:
 	CListCtrl m_listCtrl;
 	afx_msg void OnLvnItemchangedList1(NMHDR *pNMHDR, LRESULT *pResult);
+//	afx_msg void OnEditCopy();
 };

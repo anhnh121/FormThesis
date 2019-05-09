@@ -1,14 +1,24 @@
-﻿Build started 5/8/2019 2:30:59 AM.
+﻿Build started 5/9/2019 11:30:47 PM.
      1>Project "F:\Commit\Thesis\GUI\FormThesis\BKThreatScanner\BKThreatScanner\BKThreatScanner.vcxproj" on node 2 (Rebuild target(s)).
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'f:\commit\thesis\gui\formthesis\bkthreatscanner\bkthreatscanner\debug\stdafx.obj' because it is being used by another process.
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\BKThreatScanner.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
          stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\BKThreatScanner.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BKThreatScanner.cpp BKThreatScannerDlg.cpp TabOne.cpp TabTwo.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BKThreatScanner.cpp BKThreatScannerDlg.cpp SQLiteCpp\Backup.cpp SQLiteCpp\Column.cpp SQLiteCpp\Database.cpp SQLiteCpp\Exception.cpp SQLiteCpp\Statement.cpp SQLiteCpp\Transaction.cpp TabOne.cpp TabTwo.cpp UsingSQLite.cpp
+         UsingSQLite.cpp
          TabTwo.cpp
          TabOne.cpp
+         Transaction.cpp
+         Statement.cpp
+         Exception.cpp
+         Database.cpp
+         Column.cpp
+         Backup.cpp
          BKThreatScannerDlg.cpp
          BKThreatScanner.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt shell.c sqlite3.c
+         sqlite3.c
+         shell.c
          Generating Code...
        ResourceCompile:
          C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /l"0x0409" /IDebug\ /nologo /fo"Debug\BKThreatScanner.res" BKThreatScanner.rc 
@@ -16,12 +26,21 @@
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Commit\Thesis\GUI\FormThesis\BKThreatScanner\Debug\BKThreatScanner.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"F:\Commit\Thesis\GUI\FormThesis\BKThreatScanner\Debug\BKThreatScanner.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Commit\Thesis\GUI\FormThesis\BKThreatScanner\Debug\BKThreatScanner.lib" /MACHINE:X86 Debug\BKThreatScanner.res
          Debug\BKThreatScanner.obj
          Debug\BKThreatScannerDlg.obj
+         Debug\shell.obj
+         Debug\sqlite3.obj
+         Debug\Backup.obj
+         Debug\Column.obj
+         Debug\Database.obj
+         Debug\Exception.obj
+         Debug\Statement.obj
+         Debug\Transaction.obj
          Debug\stdafx.obj
          Debug\TabOne.obj
          Debug\TabTwo.obj
+         Debug\UsingSQLite.obj
          BKThreatScanner.vcxproj -> F:\Commit\Thesis\GUI\FormThesis\BKThreatScanner\Debug\BKThreatScanner.exe
      1>Done Building Project "F:\Commit\Thesis\GUI\FormThesis\BKThreatScanner\BKThreatScanner\BKThreatScanner.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.04
+Time Elapsed 00:00:20.93

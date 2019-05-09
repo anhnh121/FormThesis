@@ -5,6 +5,7 @@
 #include "BKThreatScanner.h"
 #include "TabOne.h"
 #include "afxdialogex.h"
+#include "UsingSQLite.h"
 
 
 // CTabOne dialog
@@ -30,6 +31,7 @@ void CTabOne::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CTabOne, CDialogEx)
 	ON_NOTIFY(LVN_ITEMCHANGED, IDC_LIST1, &CTabOne::OnLvnItemchangedList1)
+//	ON_COMMAND(ID_EDIT_COPY, &CTabOne::OnEditCopy)
 END_MESSAGE_MAP()
 
 BOOL CTabOne::OnInitDialog()
@@ -55,17 +57,37 @@ BOOL CTabOne::OnInitDialog()
 		}
 	}
 
+	CRect rect;
+	m_listCtrl.GetClientRect(&rect);
+	int nColInterval = rect.Width() / 10;
+
 	//Initial colum for List Ctrl
-	m_listCtrl.InsertColumn(0, _T("PID"), LVCFMT_LEFT, 200);
-	m_listCtrl.InsertColumn(1, _T("Image Path"), LVCFMT_LEFT, 200);
-	m_listCtrl.InsertColumn(2, _T("Signature"), LVCFMT_LEFT, 200);
+	m_listCtrl.InsertColumn(0, _T("PID"), LVCFMT_LEFT, 1*nColInterval);
+	m_listCtrl.InsertColumn(1, _T("Image Path"), LVCFMT_LEFT, 7 * nColInterval);
+	m_listCtrl.InsertColumn(2, _T("Signature"), LVCFMT_LEFT, 2 * nColInterval);
 
-	int temp = m_listCtrl.InsertItem(0, L"1");
+	list<USGN_INFO> dll_list;
+	CUsingSQLite sqlite;
+	dll_list = sqlite.QueryDllUnsigned(DATABASE_PATH);
+	int iSTT = 0;
+	int temp = 0;
+	CStringW cs;
+	list<USGN_INFO>::iterator it_dll;
+	for (it_dll = dll_list.begin(); it_dll != dll_list.end(); it_dll++)
+	{
+		//printf("%ld\n", it_dll->dwPID);
+		//printf("%ls\n", it_dll->szPath);
+		//printf("%ls\n", it_dll->szSigner);
+		cs.Format(L"%ld", it_dll->dwPID);
+		temp = m_listCtrl.InsertItem(iSTT, cs);
+		m_listCtrl.SetItemText(temp, 1, it_dll->szPath);
+		m_listCtrl.SetItemText(temp, 2, it_dll->szSigner);
+		iSTT++;
+	}
+	/*int temp = m_listCtrl.InsertItem(0, L"1");
 	m_listCtrl.SetItemText(temp, 1, L"anhnh.exe");
-	m_listCtrl.SetItemText(temp, 2, L"Viettel");
-	m_listCtrl.InsertItem(1, L"2");
+	m_listCtrl.SetItemText(temp, 2, L"Viettel");*/
 	
-
 	return TRUE;
 }
 // CTabOne message handlers

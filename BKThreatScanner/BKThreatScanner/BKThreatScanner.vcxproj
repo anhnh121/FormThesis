@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -73,8 +73,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -104,20 +104,42 @@
     <ClInclude Include="BKThreatScanner.h" />
     <ClInclude Include="BKThreatScannerDlg.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="sqlite3.h" />
+    <ClInclude Include="sqlite3ext.h" />
+    <ClInclude Include="SQLiteCpp\Assertion.h" />
+    <ClInclude Include="SQLiteCpp\Backup.h" />
+    <ClInclude Include="SQLiteCpp\Column.h" />
+    <ClInclude Include="SQLiteCpp\Database.h" />
+    <ClInclude Include="SQLiteCpp\Exception.h" />
+    <ClInclude Include="SQLiteCpp\SQLiteCpp.h" />
+    <ClInclude Include="SQLiteCpp\Statement.h" />
+    <ClInclude Include="SQLiteCpp\Transaction.h" />
+    <ClInclude Include="SQLiteCpp\Utils.h" />
+    <ClInclude Include="SQLiteCpp\VariadicBind.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="TabOne.h" />
     <ClInclude Include="TabTwo.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="UsingSQLite.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BKThreatScanner.cpp" />
     <ClCompile Include="BKThreatScannerDlg.cpp" />
+    <ClCompile Include="shell.c" />
+    <ClCompile Include="sqlite3.c" />
+    <ClCompile Include="SQLiteCpp\Backup.cpp" />
+    <ClCompile Include="SQLiteCpp\Column.cpp" />
+    <ClCompile Include="SQLiteCpp\Database.cpp" />
+    <ClCompile Include="SQLiteCpp\Exception.cpp" />
+    <ClCompile Include="SQLiteCpp\Statement.cpp" />
+    <ClCompile Include="SQLiteCpp\Transaction.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TabOne.cpp" />
     <ClCompile Include="TabTwo.cpp" />
+    <ClCompile Include="UsingSQLite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BKThreatScanner.rc" />

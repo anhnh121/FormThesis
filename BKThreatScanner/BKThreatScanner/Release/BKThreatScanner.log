@@ -1,0 +1,46 @@
+﻿Build started 5/10/2019 12:12:59 AM.
+     1>Project "F:\Commit\Thesis\GUI\FormThesis\BKThreatScanner\BKThreatScanner\BKThreatScanner.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\BKThreatScanner.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BKThreatScanner.cpp BKThreatScannerDlg.cpp SQLiteCpp\Backup.cpp SQLiteCpp\Column.cpp SQLiteCpp\Database.cpp SQLiteCpp\Exception.cpp SQLiteCpp\Statement.cpp SQLiteCpp\Transaction.cpp TabOne.cpp TabTwo.cpp UsingSQLite.cpp
+         BKThreatScanner.cpp
+         BKThreatScannerDlg.cpp
+         Backup.cpp
+         Column.cpp
+         Database.cpp
+         Exception.cpp
+         Statement.cpp
+         Transaction.cpp
+         TabOne.cpp
+         TabTwo.cpp
+         UsingSQLite.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt shell.c sqlite3.c
+         shell.c
+         sqlite3.c
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D NDEBUG /D _UNICODE /D UNICODE /l"0x0409" /IRelease\ /nologo /fo"Release\BKThreatScanner.res" BKThreatScanner.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Commit\Thesis\GUI\FormThesis\BKThreatScanner\Release\BKThreatScanner.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"F:\Commit\Thesis\GUI\FormThesis\BKThreatScanner\Release\BKThreatScanner.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Commit\Thesis\GUI\FormThesis\BKThreatScanner\Release\BKThreatScanner.lib" /MACHINE:X86 /SAFESEH Release\BKThreatScanner.res
+         Release\BKThreatScanner.obj
+         Release\BKThreatScannerDlg.obj
+         Release\shell.obj
+         Release\sqlite3.obj
+         Release\Backup.obj
+         Release\Column.obj
+         Release\Database.obj
+         Release\Exception.obj
+         Release\Statement.obj
+         Release\Transaction.obj
+         Release\stdafx.obj
+         Release\TabOne.obj
+         Release\TabTwo.obj
+         Release\UsingSQLite.obj
+         Generating code
+         Finished generating code
+         BKThreatScanner.vcxproj -> F:\Commit\Thesis\GUI\FormThesis\BKThreatScanner\Release\BKThreatScanner.exe
+     1>Done Building Project "F:\Commit\Thesis\GUI\FormThesis\BKThreatScanner\BKThreatScanner\BKThreatScanner.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:24.02

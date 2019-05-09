@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\SQLite">
+      <UniqueIdentifier>{9c34dcb9-a6a5-46ce-bf92-fd5185eaf00d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -39,6 +42,45 @@
     <ClInclude Include="TabTwo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="UsingSQLite.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLiteCpp\Assertion.h">
+      <Filter>Source Files\SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLiteCpp\Backup.h">
+      <Filter>Source Files\SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLiteCpp\Column.h">
+      <Filter>Source Files\SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLiteCpp\Database.h">
+      <Filter>Source Files\SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLiteCpp\Exception.h">
+      <Filter>Source Files\SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlite3.h">
+      <Filter>Source Files\SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlite3ext.h">
+      <Filter>Source Files\SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLiteCpp\Statement.h">
+      <Filter>Source Files\SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLiteCpp\Transaction.h">
+      <Filter>Source Files\SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLiteCpp\SQLiteCpp.h">
+      <Filter>Source Files\SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLiteCpp\Utils.h">
+      <Filter>Source Files\SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLiteCpp\VariadicBind.h">
+      <Filter>Source Files\SQLite</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BKThreatScanner.cpp">
@@ -55,6 +97,33 @@
     </ClCompile>
     <ClCompile Include="TabTwo.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UsingSQLite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLiteCpp\Backup.cpp">
+      <Filter>Source Files\SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLiteCpp\Column.cpp">
+      <Filter>Source Files\SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLiteCpp\Database.cpp">
+      <Filter>Source Files\SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLiteCpp\Exception.cpp">
+      <Filter>Source Files\SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="shell.c">
+      <Filter>Source Files\SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlite3.c">
+      <Filter>Source Files\SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLiteCpp\Statement.cpp">
+      <Filter>Source Files\SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLiteCpp\Transaction.cpp">
+      <Filter>Source Files\SQLite</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
