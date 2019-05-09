@@ -1,4 +1,5 @@
 #pragma once
+#include "afxcmn.h"
 
 
 // CTabOne dialog
@@ -16,6 +17,9 @@ public:
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-
+	virtual BOOL OnInitDialog();
 	DECLARE_MESSAGE_MAP()
+public:
+	CListCtrl m_listCtrl;
+	afx_msg void OnLvnItemchangedList1(NMHDR *pNMHDR, LRESULT *pResult);
 };

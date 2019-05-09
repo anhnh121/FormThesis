@@ -57,6 +57,7 @@ void CBKThreatScannerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_TAB1, m_ScanTabCtrl);
+	//DDX_Control(pDX, IDC_LIST1, m_listCtrl);
 }
 
 BEGIN_MESSAGE_MAP(CBKThreatScannerDlg, CDialogEx)
@@ -118,6 +119,8 @@ BOOL CBKThreatScannerDlg::OnInitDialog()
 	m_ScanTabOne.MoveWindow(TabRect);
 	m_ScanTabTwo.MoveWindow(TabRect);
 	m_ScanTabOne.ShowWindow(SW_SHOW);
+
+
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
